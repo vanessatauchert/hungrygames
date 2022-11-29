@@ -1,1 +1,60 @@
-<p>login works!</p>
+
+<div class="vh-100 d-flex justify-content-center align-items-center" >
+    
+    <div class="col-md-4 p-5 shadow-sm border rounded-5 border-dark" style="background-color: white">
+        <h2 class="text-center mb-4" >Bem Vindo</h2>
+        <form class="row g-3 needs-validation" novalidate>
+            <div class="mb-3" >
+                <label for="validationCustom01" class="form-label">E-mail</label>
+                <input 
+                [formControl]="email"
+                required
+                id="validationCustom01"
+                name="email" 
+                [(ngModel)]="creds.email" 
+                type="email" 
+                class="form-control bg-info bg-opacity-10 border border-dark"
+                aria-describedby="emailHelp" 
+                placeholder="Digite seu e-mail" >
+
+                <div class="valid-feedback">
+                    Looks good!
+                  </div>
+
+            </div>
+
+
+            
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Senha</label>
+                <input 
+                [formControl]="password"
+                name="password" 
+                [(ngModel)]="creds.password" 
+                type="password" class="form-control bg-info bg-opacity-10 border border-dark" 
+                id="exampleInputPassword1"
+                placeholder="***********"
+                required>
+            </div>
+
+
+            <p class="small"><a class="text-primary" href="forget-password.html">Forgot password?</a></p>
+            <div class="d-grid">
+                <button 
+                [disabled]="!validaCampos()"
+                class="btn text-light" style="background-color: #b02a37;" type="submit">Login</button>
+             
+            </div>
+        </form>
+        <div class="mt-3">
+            <p class="mb-0  text-center">Não possui conta? <a href="signup.html"
+                    class="text-primary fw-bold">Cadastre-se</a></p>
+        </div>
+    </div>
+</div>
+
+
+  
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
